@@ -1,15 +1,17 @@
 ---
 import { Image } from "astro:assets";
-import LogoImage from "@/assets/logo.svg";
+import LogoImage from "@/assets/RQ.png";
 import { useTranslations } from "@/i18n";
 
 const t = useTranslations();
 ---
 
-<Image
-  src={LogoImage}
-  alt={t("siteMetadata.title")}
-  widths={[40, 80]}
-  sizes={`(max-width: 640px) 40px, 80px`}
-  loading="eager"
-/>
+<div class="bg- grid grid-cols-2">
+  <Image
+    src={LogoImage}
+    alt={t("siteMetadata.title")}
+    loading="eager"
+    class="bg-red-"
+  />
+  <p class="flex items-center text-3xl">The Running Quail</p>
+</div>
